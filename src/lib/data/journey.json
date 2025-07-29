@@ -1,0 +1,52 @@
+[
+	{
+		"date": "September 2017",
+		"title": "Started Bachelor's of Software Engineering",
+		"description": "Embarked on my academic journey in Canada, enrolling in the Bachelor of Software Engineering program at the University of Victoria."
+	},
+	{
+		"date": "October 2019",
+		"title": "First Team Hackathon (Victoria Hand Project)",
+		"description": "Competed in my first team-based health hackathon, collaborating to develop innovative solution for the Victoria Hand Project."
+	},
+	{
+		"date": "Jan 2020 - Aug 2020",
+		"title": "First and Second Co-op at Noratek Solutions",
+		"description": "Completed my first two professional co-op terms as a Software Application Developer at Noratek Solutions Inc., gaining extensive hands-on experience."
+	},
+	{
+		"date": "March 2021",
+		"title": "First Full-Stack Team Project",
+		"description": "Collaborated with a team to successfully design, develop, and launch my first full-stack application, Triqa, from concept to completion. <a href='https://github.com/aqeelmozumder/triqa' target='_blank' class='text-primary hover:underline'>View on GitHub</a>."
+	},
+	{
+		"date": "Sep 2021 - Dec 2021",
+		"title": "Third Co-op at University of Victoria",
+		"description": "Completed my third co-op as a Learning Technology Assistant at the University of Victoria, applying my skills to enhance educational technology platforms."
+	},
+	{
+		"date": "Summer 2022",
+		"title": "Capstone Project - Schedulator",
+		"description": "Led and collaborated with a team of software engineers on our capstone project, 'Schedulator', developing a complex backend API and managing the project with Agile principles. <a href='https://github.com/SENG499-S22-Company3/backend' target='_blank' class='text-primary hover:underline'>View on GitHub</a>."
+	},
+	{
+		"date": "Sep 2022 - Dec 2022",
+		"title": "Final Co-op at BC Pension Corporation",
+		"description": "Completed my final 4-month co-op as a Junior Security Analyst at BC Pension Corporation, while concurrently finishing all my degree requirements."
+	},
+	{
+		"date": "March 2023",
+		"title": "First CodeHack by Island Health",
+		"description": "Participated in the annual CodeHack sponsored by Island Health, developing innovative solutions for pressing healthcare challenges."
+	},
+	{
+		"date": "June 2023",
+		"title": "Convocation & First Career Job",
+		"description": "Graduated with a Bachelor's in Software Engineering and immediately launched my professional career as a Systems Analyst at Brentwood College School."
+	},
+	{
+		"date": "March 2024",
+		"title": "Second CodeHack - 2nd Place Winner",
+		"description": "Returned to the Island Health CodeHack, where my team secured 2nd place for developing an innovative and impactful health-tech solution."
+	}
+]

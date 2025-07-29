@@ -1,0 +1,78 @@
+[
+	{
+		"category": "Team",
+		"image": "/images/FMC.png",
+		"title": "FindMyCamps",
+		"subtitle": "Next.js, React, TypeScript",
+		"description": "A Kids Camp finder app with Firebase integration",
+		"tags": ["Next.js", "React", "Firebase", "TS"],
+		"github": "https://github.com/findmycamps/findmycamps-app.git",
+		"live": "https://findmycamps-app.onrender.com/"
+	},
+	{
+		"category": "Solo",
+		"image": "/images/Foodmenu.png",
+		"title": "BCS Food Menu",
+		"subtitle": "JavaScript, HTML, CSS",
+		"description": "A mobile-responsive food menu web app with Firebase integration",
+		"tags": ["Vanilla JS", "Firebase", "HTML5"],
+		"github": "https://github.com/aqeelmozumder/BCS-food-menu.git",
+		"live": "https://food.brentwood.ca/"
+	},
+	{
+		"category": "Solo",
+		"image": "/images/Bike.png",
+		"title": "Biker-Vroom",
+		"subtitle": "Phaser 3 Framework",
+		"description": "A Bike game designed with Phaser 3 Framework",
+		"tags": ["Vanilla JS", "HTML5", "Phaser 3"],
+		"github": "https://github.com/aqeelmozumder/biker-vroom.git",
+		"live": "https://biker-vroom.vercel.app/"
+	},
+	{
+		"category": "Team",
+		"image": "/images/PriorityHealth.png",
+		"title": "Priority Health",
+		"subtitle": "MERN Stack",
+		"description": "A health app built for a hackathon, with a React frontend and a secure TS backend",
+		"tags": ["React", "Node.js", "TS", "MongoDB"],
+		"github": "https://github.com/Priority-Health-Canada/PriorityHealth.git",
+		"live": "https://priority-health.onrender.com/"
+	},
+	{
+		"category": "Team",
+		"image": "/images/Fenta-nil.jpg",
+		"title": "Fenta-Nil",
+		"subtitle": "Island Health Code Hack 2024",
+		"description": "Second place winner. An easy-to-use Fentanyl Detection Kit leveraging cutting-edge technology for rapid and precise detection.",
+		"tags": ["3D Print", "Engineering", "Hardware"],
+		"github": "https://docs.google.com/presentation/d/1QNLoeJxo8Np_a2f5ScwQLwIa0cwPKIIOo-fn-pWGvUQ/edit?usp=sharing"
+	},
+	{
+		"category": "Team",
+		"image": "/images/HealthHack.jpeg",
+		"title": "Victoria Hand Project",
+		"subtitle": "Health Hackathon 2019",
+		"description": "Developed a versatile and functional 3D-printed device to help people who have trouble gripping a pen or pencil.",
+		"tags": ["3D Print", "Engineering", "Hardware"],
+		"github": "https://docs.google.com/presentation/d/1W7ITnTWkmuKHkq6Cm-L4_ec3_3bCV4xGit5-9qtercg/edit?usp=sharing"
+	},
+	{
+		"category": "Team",
+		"image": "/images/Schedulator.png",
+		"title": "Schedulator",
+		"subtitle": "Capstone Project",
+		"description": "A complex scheduling application featuring a backend API built with TypeScript and Apollo GraphQL, managed with Agile principles.",
+		"tags": ["GraphQL", "TypeScript", "Jest", "Agile"],
+		"github": "https://github.com/SENG499-S22-Company3/backend"
+	},
+	{
+		"category": "Team",
+		"image": "/images/DayTrading.jpg",
+		"title": "DayTradingSystem",
+		"subtitle": "A Scalable, Dockerized Day Trading System Using Nginx and MongoDB",
+		"description": "A containerized day trading app featuring an Nginx load balancer and a MongoDB backend",
+		"tags": ["Docker", "Python", "Pytest", "Nginx", "MongoDB"],
+		"github": "https://github.com/aqeelmozumder/DayTradingSystem.git"
+	}
+]

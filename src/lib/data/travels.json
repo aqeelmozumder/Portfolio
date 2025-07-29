@@ -1,0 +1,5 @@
+[
+	{ "location": "Paris, France", "year": "2018", "image": "/images/Bike.png" },
+	{ "location": "Tokyo, Japan", "year": "2019", "image": "/images/FMC.png" },
+	{ "location": "New York, USA", "year": "2020", "image": "/images/Foodmenu.png" }
+]
