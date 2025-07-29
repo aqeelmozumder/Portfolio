@@ -437,110 +437,6 @@ h6 {
 	border-color: transparent;
 }
 
-/* Enhanced Travel Cards */
-.travel-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	gap: 2rem;
-}
-
-.travel-card-enhanced {
-	position: relative;
-	height: 320px;
-	border-radius: 20px;
-	overflow: hidden;
-	cursor: pointer;
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	opacity: 0;
-	transform: translateY(30px);
-	border: 2px solid transparent;
-}
-
-.travel-card-enhanced.animate-in {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-.travel-card-enhanced:hover {
-	transform: translateY(-10px) scale(1.02);
-	border-color: rgba(99, 102, 241, 0.5);
-	box-shadow:
-		0 25px 50px rgba(0, 0, 0, 0.4),
-		0 0 30px rgba(99, 102, 241, 0.2);
-}
-
-.travel-image-container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-.travel-image-container img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 0.4s ease;
-}
-
-.travel-card-enhanced:hover .travel-image-container img {
-	transform: scale(1.1);
-}
-
-.travel-overlay-gradient {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(
-		180deg,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0.3) 50%,
-		rgba(0, 0, 0, 0.8) 100%
-	);
-	z-index: 1;
-}
-
-.travel-content-enhanced {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 1.5rem;
-	z-index: 2;
-	color: white;
-}
-
-.travel-description {
-	opacity: 0;
-	max-height: 0;
-	overflow: hidden;
-	transition: all 0.4s ease;
-	margin-top: 0.5rem;
-}
-
-.travel-card-enhanced:hover .travel-description {
-	opacity: 1;
-	max-height: 150px;
-	margin-top: 1rem;
-}
-
-.travel-stats {
-	display: flex;
-	gap: 1rem;
-	margin-top: 1rem;
-}
-
-.stat-item {
-	display: flex;
-	align-items: center;
-	gap: 0.25rem;
-	background: rgba(255, 255, 255, 0.1);
-	padding: 0.25rem 0.5rem;
-	border-radius: 12px;
-	backdrop-filter: blur(10px);
-}
-
 /* Enhanced Interest Cards */
 .interests-grid {
 	display: grid;
@@ -633,95 +529,380 @@ h6 {
 	}
 }
 
-/* Enhanced Contact Form */
-.contact-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-	margin-top: 2rem;
-}
+    /* Background Effects */
+    .contact-bg-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+            linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+        background-size: 60px 60px;
+        animation: gridFloat 20s linear infinite;
+        z-index: 1;
+    }
 
-.form-group {
-	margin-bottom: 1.5rem;
-}
+    @keyframes gridFloat {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(60px, 60px); }
+    }
 
-.form-group label {
-	display: block;
-	margin-bottom: 0.5rem;
-	font-weight: 600;
-	color: var(--light);
-}
+    .contact-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.1;
+        z-index: 2;
+    }
 
-.form-control {
-	width: 100%;
-	padding: 1rem;
-	border: 2px solid var(--gray-medium);
-	border-radius: 10px;
-	background: var(--gray-dark);
-	color: var(--light);
-	font-size: 1rem;
-	transition: all 0.3s ease;
-}
+    .contact-blob-1 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+        top: 20%;
+        right: 10%;
+        animation: blobFloat 15s infinite ease-in-out;
+    }
 
-.form-control:focus {
-	outline: none;
-	border-color: var(--primary);
-	box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-	background: var(--gray-medium);
-}
+    .contact-blob-2 {
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+        bottom: 20%;
+        left: 10%;
+        animation: blobFloat 20s infinite ease-in-out reverse;
+    }
 
-.contact-info {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
+    @keyframes blobFloat {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(20px, -20px) scale(1.1); }
+    }
 
-.contact-item {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	padding: 1.5rem;
-	background: var(--gray-dark);
-	border-radius: 15px;
-	border: 1px solid var(--gray-medium);
-	transition: all 0.3s ease;
-	cursor: pointer;
-}
+    /* Contact Cards Grid */
+    .contact-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 
-.contact-item:hover {
-	border-color: var(--primary);
-	transform: translateX(10px);
-	background: var(--gray-medium);
-}
+    .contact-card-enhanced {
+        position: relative;
+        background: rgba(26, 26, 26, 0.8);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 2rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transform: translateY(30px);
+        animation: cardFadeIn 0.8s ease-out forwards;
+        animation-delay: var(--delay);
+        overflow: hidden;
+    }
 
-.contact-icon {
-	width: 50px;
-	height: 50px;
-	background: linear-gradient(135deg, var(--primary), var(--secondary));
-	border-radius: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	font-size: 1.2rem;
-}
+    @keyframes cardFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-/* Success Message */
-.success-message {
-	background: linear-gradient(135deg, var(--accent), #059669);
-	color: white;
-	padding: 1rem;
-	border-radius: 10px;
-	margin-top: 1rem;
-	opacity: 0;
-	transform: translateY(-20px);
-	transition: all 0.3s ease;
-}
+    .contact-card-enhanced:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 
+            0 25px 50px rgba(0, 0, 0, 0.4),
+            0 0 30px var(--card-color);
+        border-color: var(--card-color);
+    }
 
-.success-message.show {
-	opacity: 1;
-	transform: translateY(0);
-}
+    .card-bg-effect {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .contact-card-enhanced:hover .card-bg-effect {
+        left: 100%;
+    }
+
+    .card-border-glow {
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(45deg, var(--card-color), transparent, var(--card-color));
+        border-radius: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+    }
+
+    .contact-card-enhanced:hover .card-border-glow {
+        opacity: 0.3;
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .contact-icon-enhanced {
+        width: 70px;
+        height: 70px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: white;
+        position: relative;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-card-enhanced:hover .contact-icon-enhanced {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .icon-ripple {
+        position: absolute;
+        inset: -15px;
+        border: 2px solid var(--card-color);
+        border-radius: 50%;
+        opacity: 0.6;
+    }
+
+    .contact-text {
+        flex-grow: 1;
+    }
+
+    .contact-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-subtitle {
+        font-size: 0.875rem;
+        color: var(--card-color);
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+    }
+
+    .contact-info {
+        color: #d1d5db;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .copy-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d1d5db;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .copy-btn:hover {
+        background: var(--card-color);
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .copy-tooltip {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: var(--card-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+        z-index: 10;
+    }
+
+    .card-shimmer {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+
+    /* Social Links */
+    .social-links-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .social-link {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        background: rgba(26, 26, 26, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: socialFadeIn 0.6s ease-out forwards;
+        animation-delay: var(--social-delay);
+    }
+
+    @keyframes socialFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .social-link:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 10px 25px var(--social-color);
+        border-color: var(--social-color);
+    }
+
+    .social-bg {
+        position: absolute;
+        inset: 0;
+        background: var(--social-color);
+        border-radius: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+    }
+
+    .social-link:hover .social-bg {
+        opacity: 0.9;
+    }
+
+    /* Quick Actions */
+    .quick-actions-container {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary.large,
+    .btn-outline.large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        min-width: 200px;
+    }
+
+    /* Availability Status */
+    .availability-status {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .status-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-dot {
+        width: 12px;
+        height: 12px;
+        background: #10b981;
+        border-radius: 50%;
+        position: relative;
+        animation: statusPulse 2s infinite;
+    }
+
+    @keyframes statusPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    .status-text {
+        color: #10b981;
+        font-weight: 500;
+        font-size: 0.95rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-card-enhanced {
+            padding: 1.5rem;
+        }
+
+        .card-content {
+            gap: 1rem;
+        }
+
+        .contact-icon-enhanced {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+
+        .quick-actions-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-primary.large,
+        .btn-outline.large {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
 
 /* Loading States */
 .loading-spinner {
@@ -939,294 +1120,6 @@ h6 {
 	opacity: 0.2; /* Adjust for desired visibility */
 }
 
-/* ===== TRAVEL MAP STYLES ===== */
-/* Add these styles to your existing app.css file */
-
-/* Map Container */
-.map-container {
-	background: linear-gradient(135deg, var(--gray-dark) 0%, var(--gray-medium) 100%);
-	position: relative;
-	transition: all 0.3s ease;
-}
-
-.map-container:hover {
-	border-color: rgba(99, 102, 241, 0.3);
-	box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
-}
-
-/* World Map SVG */
-.world-map {
-	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
-
-/* Continent Styles */
-.continent {
-	fill: rgba(71, 85, 105, 0.9);
-	stroke: rgba(100, 116, 139, 0.6);
-	stroke-width: 1.5;
-	transition: all 0.3s ease;
-	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.continent:hover {
-	fill: rgba(100, 116, 139, 0.95);
-	stroke: rgba(99, 102, 241, 0.4);
-	stroke-width: 2;
-}
-
-/* Travel Markers */
-.travel-marker-group {
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-
-.marker-pulse {
-	fill: rgba(99, 102, 241, 0.15);
-	stroke: rgba(99, 102, 241, 0.3);
-	stroke-width: 2;
-	animation: markerPulse 3s infinite ease-in-out;
-	pointer-events: none;
-}
-
-@keyframes markerPulse {
-	0% {
-		r: 12;
-		opacity: 0.8;
-	}
-	50% {
-		r: 25;
-		opacity: 0.2;
-	}
-	100% {
-		r: 12;
-		opacity: 0.8;
-	}
-}
-
-.travel-marker {
-	fill: url(#markerGradient);
-	stroke: white;
-	stroke-width: 3;
-	filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
-	transition: all 0.3s ease;
-	cursor: pointer;
-}
-
-.travel-marker:hover,
-.travel-marker:focus {
-	transform: scale(1.2);
-	filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.6));
-	stroke-width: 4;
-}
-
-.travel-marker:focus {
-	outline: 2px solid var(--primary);
-	outline-offset: 2px;
-}
-
-.marker-center {
-	fill: white;
-	pointer-events: none;
-}
-
-.travel-marker-group:hover .marker-pulse {
-	animation-duration: 1s;
-	stroke: rgba(244, 63, 94, 0.6);
-	fill: rgba(244, 63, 94, 0.3);
-}
-
-.travel-marker-group:hover .travel-marker {
-	fill: url(#markerGradient);
-}
-
-/* Travel Stats */
-.travel-stats-grid {
-	animation: fadeInUp 0.8s ease-out 0.5s both;
-}
-
-.stat-card {
-	transition: all 0.3s ease;
-	position: relative;
-	overflow: hidden;
-}
-
-.stat-card::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
-	transition: left 0.5s ease;
-}
-
-.stat-card:hover::before {
-	left: 100%;
-}
-
-.stat-card:hover {
-	transform: translateY(-5px);
-	border-color: rgba(99, 102, 241, 0.3);
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Tooltip Styles */
-.travel-tooltip {
-	animation: tooltipFadeIn 0.2s ease-out;
-	z-index: 1000;
-}
-
-@keyframes tooltipFadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.tooltip-arrow {
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid rgb(17, 24, 39);
-}
-
-/* Modal Styles */
-.travel-modal {
-	animation: modalFadeIn 0.3s ease-out;
-	backdrop-filter: blur(8px);
-}
-
-@keyframes modalFadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-.modal-backdrop {
-	animation: backdropFadeIn 0.3s ease-out;
-	border: none;
-	background: rgba(0, 0, 0, 0.8);
-	backdrop-filter: blur(8px);
-}
-
-.modal-backdrop:focus {
-	outline: 2px solid var(--primary);
-	outline-offset: -2px;
-}
-
-@keyframes backdropFadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-.modal-content {
-	animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	border: 1px solid rgba(99, 102, 241, 0.2);
-	box-shadow:
-		0 25px 50px rgba(0, 0, 0, 0.5),
-		0 0 0 1px rgba(255, 255, 255, 0.05),
-		inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-@keyframes modalSlideIn {
-	from {
-		opacity: 0;
-		transform: scale(0.8) translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1) translateY(0);
-	}
-}
-
-/* Enhanced Button Styles for Modal */
-.modal-content .btn-primary,
-.modal-content .btn-outline {
-	font-size: 0.875rem;
-	padding: 0.75rem 1.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-}
-
-.modal-content .btn-primary:hover,
-.modal-content .btn-outline:hover {
-	transform: translateY(-2px);
-}
-
-/* Gradient Definitions for SVG */
-.world-map defs {
-	display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-	.map-container {
-		margin: 0 -1rem;
-		border-radius: 1rem;
-	}
-
-	.modal-content {
-		margin: 1rem;
-		max-height: calc(100vh - 2rem);
-	}
-
-	.travel-tooltip {
-		font-size: 0.75rem;
-	}
-
-	.travel-stats-grid {
-		grid-template-columns: 1fr;
-		gap: 1rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.travel-marker {
-		r: 6;
-	}
-
-	.travel-marker:hover {
-		r: 9;
-	}
-
-	.marker-pulse {
-		r: 6;
-	}
-
-	@keyframes markerPulse {
-		0% {
-			r: 6;
-			opacity: 1;
-		}
-		50% {
-			r: 15;
-			opacity: 0.3;
-		}
-		100% {
-			r: 6;
-			opacity: 1;
-		}
-	}
-}
 
 /* Enhanced Animation Utilities */
 @keyframes fadeInUp {

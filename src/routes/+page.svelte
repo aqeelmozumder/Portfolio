@@ -80,7 +80,7 @@
 
 <footer class="border-t border-white/10 bg-zinc-900/50 py-8 text-center">
 	<div class="container mx-auto px-6">
-		<p class="mb-4 text-zinc-400">&copy; 2024 Aqeel Mozumder. All Rights Reserved.</p>
+		<p class="mb-4 text-zinc-400">&copy; 2025 Aqeel Mozumder. All Rights Reserved.</p>
 		<div class="flex justify-center space-x-6">
 			<a
 				href="mailto:aqeelmozumder@hotmail.com"
