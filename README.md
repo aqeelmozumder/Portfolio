@@ -1,38 +1,33 @@
-# sv
+# My Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, interactive portfolio website built with SvelteKit and TailwindCSS.
 
-## Creating a project
+## ✨ Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Responsive Design** - Works seamlessly on all devices
+- **Interactive Elements** - Engaging animations and hover effects
+- **Modern Tech Stack** - SvelteKit, TypeScript, TailwindCSS
 
-```bash
-# create a new project in the current directory
-npx sv create
+## 🚀 Live on Vercel
+https://aqeelmozumder-portfolio.vercel.app/
 
-# create a new project in my-app
-npx sv create my-app
-```
 
-## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 🛠️ Built With
 
-```bash
-npm run dev
+- [SvelteKit](https://kit.svelte.dev/) - Web framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [Vite](https://vitejs.dev/) - Build tool
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 📫 Get in Touch
 
-## Building
+- **Email**: aqeelmozumder@hotmail.com
+- **Location**: Victoria, BC, Canada
+- **LinkedIn**: [Connect with me](https://linkedin.com)
+- **GitHub**: [Check out my projects](https://github.com)
 
-To create a production version of your app:
+---
 
-```bash
-npm run build
-```
+⭐ Star this repo if you found it helpful!
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
